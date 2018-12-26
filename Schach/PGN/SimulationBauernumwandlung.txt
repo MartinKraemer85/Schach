@@ -1,0 +1,8 @@
+[Event Test]
+[Site Test]
+[Date Test]
+[Round Test]
+[White Test]
+[Black Test]
+[Result Test]
+1.a7 b2 2.a8=R b1=Q

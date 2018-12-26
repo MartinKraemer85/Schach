@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{364DF99A-51FB-4726-818B-AA01E85D6D75}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Schach</RootNamespace>
+    <AssemblyName>Schach</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Figur\Bauer.cs" />
+    <Compile Include="Figur\Dame.cs" />
+    <Compile Include="Figur\Figur.cs" />
+    <Compile Include="FileFolderAuslesen.cs" />
+    <Compile Include="Bauernumwandlung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bauernumwandlung.Designer.cs">
+      <DependentUpon>Bauernumwandlung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSchachbrett.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSchachbrett.Designer.cs">
+      <DependentUpon>FormSchachbrett.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Figur\Koenig.cs" />
+    <Compile Include="Figur\Laeufer.cs" />
+    <Compile Include="Figur\Pferd.cs" />
+    <Compile Include="PGNFileEinlesen.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rochade.cs" />
+    <Compile Include="Simulation.cs" />
+    <Compile Include="Figur\Turm.cs" />
+    <EmbeddedResource Include="Bauernumwandlung.resx">
+      <DependentUpon>Bauernumwandlung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSchachbrett.resx">
+      <DependentUpon>FormSchachbrett.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Bilder\sBauer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Bilder\sDame.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Bilder\sKoenig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Bilder\sLaeufer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Bilder\sPferd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Bilder\sTurm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Bilder\wBauer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Bilder\wDame.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Bilder\wKoenig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Bilder\wLaeufer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Bilder\wPferd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Bilder\wTurm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PGN\test.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
